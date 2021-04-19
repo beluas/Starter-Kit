@@ -1,0 +1,12 @@
+.skill-box {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    padding: 2em 0;
+
+    font-size: 2em;
+  }
+}

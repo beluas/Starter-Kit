@@ -1,0 +1,22 @@
+.jumbotron {
+  padding: 5em 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+
+  font-size: 1.2em;
+  color: black;
+
+  h2 {
+    text-align: center;
+    width: 450px;
+  }
+
+  button {
+    margin-top: 2em;
+    color: black;
+    border: 2px solid black;
+  }
+}

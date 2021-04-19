@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "author": "",
   "license": "ISC",
@@ -25,8 +26,14 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "gsap": "^3.6.0",
     "node-sass": "^5.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-p": "^1.1.6",
+    "react-parallax": "^3.2.1",
+    "react-router-dom": "^5.2.0",
+    "smooth-scrollbar": "^8.6.0"
   }
 }

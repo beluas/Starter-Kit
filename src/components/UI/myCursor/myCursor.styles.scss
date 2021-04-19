@@ -1,0 +1,154 @@
+.cursor {
+  position: absolute;
+  background: rgba(255, 255, 255, 1);
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  z-index: 100;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity,
+    0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) background-color;
+  user-select: none;
+  pointer-events: none;
+  transform: scale(0.8);
+  transform-origin: center;
+}
+
+.cursor.active {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(8);
+}
+
+.cursor.active-img {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(8);
+}
+
+.cursor.active-btn {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(8);
+}
+
+.cursor.active-nav {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(8);
+}
+
+.cursor.active-img::before,
+.cursor.active-btn::before {
+  font-weight: 400;
+
+  color: black;
+  position: absolute;
+  font-size: 2px;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  transform: translateY(-60%) translateX(-50%);
+}
+
+.cursor.active-btn::before {
+  color: white;
+  content: "\f103";
+  //font-style: normal;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+
+.cursor.active-nav::before {
+  color: white;
+  content: "\f35a";
+  font-size: 2px;
+  //font-style: normal;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  transform: translateY(-60%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+.cursor-follower {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  z-index: 999;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(4px, 4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor-follower.active {
+  opacity: 0.3;
+  transform: scale(3);
+}
+
+.cursor.button {
+  background-color: #151515;
+}
+
+.cursor-follower.button {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+// /*ICONSCROLL--------------------*/
+
+// .icon-scroll:before {
+//   position: absolute;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
+// .icon-scroll {
+//   z-index: 200;
+//   opacity: 0;
+//   transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+
+//   width: 30px;
+//   height: 50px;
+//   top: 0%;
+//   left: 0%;
+//   position: relative;
+//   box-shadow: inset 0px 0px 1px 2px #fff;
+//   border-radius: 25px;
+// }
+// .icon-scroll:before {
+//   content: "";
+//   width: 4px;
+//   height: 4px;
+//   background: #fff;
+//   transform: translateX(-50%);
+//   left: 50%;
+//   top: 30%;
+//   border-radius: 4px;
+//   -webkit-animation-duration: 0.8s;
+//   animation-duration: 0.8s;
+//   -webkit-animation-iteration-count: infinite;
+//   animation-iteration-count: infinite;
+//   -webkit-animation-name: scroll;
+//   animation-name: scroll;
+// }
+// @-webkit-keyframes scroll {
+//   0% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateY(12px);
+//   }
+// }
+// @keyframes scroll {
+//   0% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateY(12px);
+//   }
+// }
