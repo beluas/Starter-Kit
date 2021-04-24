@@ -76,8 +76,8 @@ const Footer = () => {
         <section className="third-section">
           <div className="locations">
             <div className="location">
-              <h4>Beluacode Berlin</h4>
-              <p>Halensee 10711 DE</p>
+              <p className="location-title">Beluacode </p>
+              <p>Berlin 10711 DE</p>
               <p>Seesener Str.</p>
             </div>
 

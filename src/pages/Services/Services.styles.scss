@@ -42,11 +42,14 @@
       @media (max-width: 1500px) {
         transform: translateY(0px);
       }
+      @media (max-width: 1150px) {
+        flex-basis: 100%;
+        //margin-top: 10em;
+        display: none;
+      }
     }
   }
 
-  @media (max-width: 1150px) {
-  }
   header {
     background-color: #fff;
     color: black;

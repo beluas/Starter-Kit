@@ -8,7 +8,7 @@ nav {
   color: white;
   bottom: 0;
 
-  @media (max-width: 870px) {
+  @media (max-width: 869px) {
     display: none;
   }
   ul {
@@ -54,12 +54,12 @@ nav {
     &:hover {
       .line1 {
         position: relative;
-        left: -10px;
+        transform: translateX(-10px);
       }
 
       .line2 {
         position: relative;
-        left: 10px;
+        transform: translateX(10px);
       }
     }
 
@@ -102,6 +102,9 @@ nav {
 }
 
 .extended-menu {
+  @media (max-width: 869px) {
+    display: none;
+  }
   position: fixed;
   z-index: 3;
   top: 0;

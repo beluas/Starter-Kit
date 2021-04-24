@@ -13,7 +13,14 @@ const Jumbotron = () => {
   }, []);
 
   return (
-    <div className="jumbotron">
+    <div
+      style={
+        window.location.href.includes("works") && screen.width < 1000
+          ? { marginTop: "10em" }
+          : null
+      }
+      className="jumbotron"
+    >
       <h2>Richiedi informazioni senza impegno</h2>
       <MyBtn> Contattaci </MyBtn>
     </div>

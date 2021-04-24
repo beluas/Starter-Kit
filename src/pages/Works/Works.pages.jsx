@@ -22,7 +22,7 @@ class Works extends React.Component {
   componentDidMount() {
     if (screen.width < 768) {
       this.setState({ isMobile: true }, () => {
-        document.querySelector("body").style.overflow = "auto";
+        document.querySelector("body").style.overflow = "visible ";
       });
     } else {
       this.setState({ isMobile: false }, () => {

@@ -86,7 +86,9 @@
               margin-left: 0.8em;
               // margin-right: 0.5em;
               position: relative;
-
+              @media (max-width: 600px) {
+                display: none;
+              }
               transform: translateY(25%);
             }
           }
@@ -96,9 +98,14 @@
   }
 
   .skills {
+    @media (max-width: 1150px) {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
     img {
       margin-top: 3em;
-      margin-right: 2.5em;
     }
   }
   .image-wrapper {
@@ -137,14 +144,26 @@
     justify-content: space-between;
     margin-top: 3em;
     @media (max-width: 1150px) {
-      justify-content: center;
+      display: flex;
+      justify-self: center;
+      justify-content: space-between;
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 3em;
+      @media (max-width: 700px) {
+        width: 60%;
+      }
+      @media (max-width: 600px) {
+        width: 70%;
+      }
+      @media (max-width: 500px) {
+        width: 80%;
+      }
     }
+
     button {
       margin-top: 3em;
       border: 1px solid white;
-      &:nth-of-type(2) {
-        margin-left: 5em;
-      }
     }
   }
 }

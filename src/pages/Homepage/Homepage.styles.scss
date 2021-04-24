@@ -15,8 +15,12 @@
   @media (max-width: 760px) {
     opacity: 1;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 869px) {
     margin-left: 0em;
+  }
+
+  @media (max-width: 930px) {
+    padding: 2em;
   }
   header {
     @media (max-width: 700px) {
@@ -26,6 +30,17 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+
+    @media (max-width: 769px) {
+      align-items: center;
+    }
+
+    button {
+      @media (max-width: 769px) {
+        width: 250px;
+      }
+    }
+
     h2 {
       margin-bottom: 0.1em;
     }
@@ -51,8 +66,8 @@
     height: 200px;
     overflow: hidden;
 
-    @media (max-width: 1500px) {
-      width: 80%;
+    @media (max-width: 1400px) {
+      width: 95%;
     }
 
     @media (max-width: 1000px) {
@@ -60,10 +75,15 @@
     }
 
     @media (max-width: 800px) {
-      font-size: 2.8em;
+      font-size: 2.6em;
     }
+
+    @media (max-width: 769px) {
+      text-align: center;
+    }
+
     @media (max-width: 500px) {
-      font-size: 2.5em;
+      font-size: 2.3em;
     }
 
     .box {
@@ -87,7 +107,7 @@
     flex-direction: column;
   }
   @media (max-width: 700px) {
-    margin-top: 10em;
+    margin-top: 3em;
   }
 
   // & section {

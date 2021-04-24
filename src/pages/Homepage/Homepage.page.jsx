@@ -57,7 +57,7 @@ class Homepage extends React.Component {
                 handleClick={() => {
                   this.props.history.push("/works");
                 }}
-                title="Siti Web"
+                title="Siti Web & E-Commerce"
                 imgUrl={section2}
                 tags={[
                   "Siti Web",

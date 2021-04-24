@@ -5,6 +5,7 @@ gsap.registerPlugin(TextPlugin);
 
 export const loaderAnimation = () => {
   let tl1 = new TimelineMax();
+  document.querySelector("body").style.overflow = "hidden";
   tl1
     .to(
       ".homepage",
@@ -12,7 +13,7 @@ export const loaderAnimation = () => {
 
       { opacity: 1, delay: 0.5 }
     )
-    .to("body", 0.8, { overflow: "visible", delay: 0.5 })
+    .to("body", 0.8, { overflow: "hidden", delay: 2.7 })
     .to(".loader-box", 2, { display: "none", delay: 0.8 });
 };
 
@@ -45,6 +46,7 @@ export const loaderTitle = () => {
 };
 
 export const loaderAnimationWorks = () => {
+  document.querySelector("body").style.overflow = "hidden";
   let tl1 = new TimelineMax();
   tl1
     .to(
@@ -53,11 +55,12 @@ export const loaderAnimationWorks = () => {
 
       { opacity: 1, delay: 1 }
     )
-    .to("body", 0.8, { overflow: "visible", delay: 1 })
+    .to("body", 0.8, { overflow: "visible", delay: 2.7 })
     .to(".loader-box", 2, { display: "none" });
 };
 
 export const loaderAnimationServices = () => {
+  document.querySelector("body").style.overflow = "hidden";
   let tl1 = new TimelineMax();
   tl1
     .to(
@@ -66,11 +69,13 @@ export const loaderAnimationServices = () => {
 
       { opacity: 1, delay: 1 }
     )
-    .to("body", 0.8, { overflow: "visible", delay: 2.7 })
+    .to("body", 1.8, { overflow: "visible", delay: 2.7 })
     .to(".loader-box", 2, { display: "none", delay: 0.8 });
 };
 
 export const loaderAnimationWork = () => {
+  document.querySelector("body").style.overflow = "hidden";
+
   let tl1 = new TimelineMax();
   tl1
     .to(
@@ -79,6 +84,6 @@ export const loaderAnimationWork = () => {
 
       { opacity: 1, delay: 1 }
     )
-    .to("body", 0.8, { overflow: "visible", delay: 1 })
+    .to("body", 0.8, { overflow: "visible", delay: 2.7 })
     .to(".loader-box", 2, { display: "none" });
 };

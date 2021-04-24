@@ -221,9 +221,9 @@ class Nav extends React.Component {
           </ul>
 
           <ul className="extended-menu-social">
-            <li>
+            {/* <li>
               <Link to="mailto:ivanmaddaluno1993@gmail.com">Email</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/">Linkedin</Link>
             </li>

@@ -1,5 +1,5 @@
 .cursor {
-  @media (max-width: 1100px) {
+  @media (max-width: 900px) {
     display: none;
   }
   position: absolute;
@@ -43,34 +43,6 @@
   transform: scale(8);
 }
 
-// .cursor.active-btn,
-// .cursor.active-nav {
-//   background: rgba(0, 0, 0, 0.7);
-//   transform: scale(8);
-// }
-
-// .cursor.active-img::before,
-// .cursor.active-btn::before {
-//   font-weight: 400;
-//   color: black;
-//   position: absolute;
-//   font-size: 2px;
-//   top: 50%;
-//   left: 50%;
-//   display: flex;
-//   transform: translateY(-60%) translateX(-50%);
-// }
-
-// .cursor.active-btn::before {
-//   color: white;
-//   content: "Hi !";
-// }
-
-// .cursor.active-::before {
-//   color: white;
-//   content: "Hi !";
-// }
-
 .cursor.active-nav::before {
   color: white;
   //content: "Go !";
@@ -82,7 +54,7 @@
 }
 
 .cursor-follower {
-  @media (max-width: 1100px) {
+  @media (max-width: 900px) {
     display: none;
   }
   position: absolute;
