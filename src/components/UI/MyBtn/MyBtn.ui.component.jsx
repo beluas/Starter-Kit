@@ -1,12 +1,27 @@
 import React from "react";
 import "./MyBtn.styles.scss";
-import arrow from "../../../assets/icons/arrow-top-right.png";
+import { applyClassOnHover } from "../../../util/fn.js";
 
 const MyBtn = (props) => {
   return (
-    <button className="myBtn">
+    <button
+      onMouseEnter={(e) => {
+        applyClassOnHover(`.${e.target.classList[0]}`, [
+          "active",
+          "active-follower",
+        ]);
+      }}
+      className="myBtn"
+      //data-content="Hi !"
+      onClick={() => {
+        //function normalizeCursor(){} to Create
+        document.querySelector(".cursor").classList.remove("active");
+        document
+          .querySelector(".cursor-follower")
+          .classList.remove("active-follower");
+      }}
+    >
       {props.children}
-      <img src={arrow} alt="arrow-top-right" />
     </button>
   );
 };

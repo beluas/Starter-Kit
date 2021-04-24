@@ -6,6 +6,7 @@ import section3 from "../../assets/images/section3.jpg";
 import SectionBox from "../../components/SectionBox/SectionBox.component.jsx";
 //import LatestNews from "../../components/LatestNews/LatestNews.component.jsx";
 import LoaderBox from "./LoaderBox.component.jsx";
+import { Link } from "react-router-dom";
 
 class Homepage extends React.Component {
   state = {
@@ -15,12 +16,15 @@ class Homepage extends React.Component {
 
   componentDidMount() {
     if (screen.width < 768) {
-      this.setState({ isMobile: true }, () => {});
+      this.setState({ isMobile: true }, () => {
+        document.querySelector("body").style.overflow = "auto";
+      });
     } else {
       this.setState({ isMobile: false }, () => {
-        import("./Animations.js").then((animations) =>
-          animations.loaderAnimation()
-        );
+        import("./Animations.js").then((animations) => {
+          animations.loaderAnimation();
+          animations.loaderTitle();
+        });
       });
     }
   }
@@ -28,15 +32,24 @@ class Homepage extends React.Component {
   render() {
     return (
       <Suspense fallback={<h1>Loading</h1>}>
-        {!this.state.isMobile ? <LoaderBox /> : null}
+        {!this.state.isMobile ? null : null}
+
         <div className="flex">
           <section className="homepage">
             <header>
-              {/* <h2>_BeluaCode_</h2> */}
+              {/* <h2>
+                BeluaCode. <span className="small"></span>{" "}
+              </h2> */}
+              <h1>
+                La soluzione giusta per
+                <br />
+                <span className="text"></span>
+                <span className="typewriter-cursor">_</span>
+              </h1>
 
-              <h1>La soluzione giusta per ll tuo sito web.</h1>
-
-              <MyBtn>Esplora</MyBtn>
+              <Link to="/services">
+                <MyBtn>Servizi</MyBtn>
+              </Link>
             </header>
 
             <div className="sections">
@@ -44,15 +57,30 @@ class Homepage extends React.Component {
                 handleClick={() => {
                   this.props.history.push("/works");
                 }}
-                title="Siti web & Elementi di design"
+                title="Siti Web"
                 imgUrl={section2}
+                tags={[
+                  "Siti Web",
+                  "E-Commerce",
+                  "Web-App",
+                  "Responsive",
+                  "Ottimizzazione Performance",
+                ]}
               />
               <SectionBox
                 handleClick={() => {
-                  this.props.history.push("/works");
+                  this.props.history.push("/digital-marketing-service");
                 }}
-                title="Ottimizzazione Web Analytics "
+                title="Digital Marketing Services"
                 imgUrl={section3}
+                tags={[
+                  "Campagne Google Ads",
+                  "Campagne Facebook & Instagram",
+                  "SEO HTML",
+                  "Google Analytics",
+                  "Google Tag Manager",
+                  "Ottimizzazione Performance",
+                ]}
               />
             </div>
 

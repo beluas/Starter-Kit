@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.styles.scss";
-import icon from "../../assets/icons/arrow-top-right.png";
+// import icon from "../../assets/icons/arrow-top-right.png";
 import Jumbotron from "../../components/Jumbotron/Jumbotron.component";
 import Logo from "../../assets/images/logo.png";
 
@@ -11,12 +11,12 @@ const Footer = () => {
       <Jumbotron />
       <footer>
         <section className="first-section">
-          <ul className="footer-menu">
+          <ul className="footer-menu social">
             <li>
-              <Link to="/">Lavori</Link>
+              <Link to="/">Portfolio</Link>
             </li>
             <li>
-              <Link to="/">Testimonials</Link>
+              <Link to="/">Servizi Digital Marketing</Link>
             </li>
             <li>
               <Link to="/">Contattaci</Link>
@@ -25,7 +25,7 @@ const Footer = () => {
               <Link to="/">Blog</Link>
             </li>
           </ul>
-          <ul className="social">
+          {/* <ul className="social">
             <li>
               <Link to="/">
                 Facebook{" "}
@@ -59,7 +59,7 @@ const Footer = () => {
                 />
               </Link>
             </li>
-          </ul>
+          </ul> */}
         </section>
         <section className="second-section">
           {" "}

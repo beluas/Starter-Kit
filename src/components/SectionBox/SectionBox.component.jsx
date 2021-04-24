@@ -3,7 +3,7 @@ import MyBtn from "../UI/MyBtn/MyBtn.ui.component.jsx";
 import "./SectionBox.styles.scss";
 import Services from "../Services/Services.component.jsx";
 
-const SectionBox = ({ imgUrl, title, handleClick }) => {
+const SectionBox = ({ imgUrl, title, handleClick, tags }) => {
   return (
     <div className="wrapper-section-box">
       <div
@@ -23,9 +23,9 @@ const SectionBox = ({ imgUrl, title, handleClick }) => {
         ></div>
         <h2>{title}</h2>
 
-        <MyBtn>I nostri lavori</MyBtn>
+        <MyBtn>Scopri</MyBtn>
       </div>
-      <Services />
+      <Services tags={tags} />
     </div>
   );
 };

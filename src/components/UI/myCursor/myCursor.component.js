@@ -3,15 +3,10 @@ import "./myCursor.styles.scss";
 import { gsap, TweenMax } from "gsap";
 
 class MyCursor extends React.Component {
-  //   constructor(props)
-  //   {
-  //       super(props)
-
-  //   }
-
   componentDidMount() {
     let cursor = document.querySelector(".cursor");
     let cursorFollower = document.querySelector(".cursor-follower");
+
     gsap.config({
       nullTargetWarn: false,
     });
@@ -58,40 +53,14 @@ class MyCursor extends React.Component {
       cursorFollower.style.backgroundColor = ")";
     }
 
-    [...document.querySelectorAll("button")].forEach((button) => {
-      button.addEventListener("mouseover", () => {
-        cursor.classList.add("active-btn");
-
-        cursorFollower.classList.add("active");
-      });
-
-      button.addEventListener("mouseleave", () => {
-        cursor.classList.remove("active-btn");
-
-        cursorFollower.classList.remove("active");
-      });
-    });
-
     // document.querySelector(".toggleMenu").addEventListener("click", () => {
     //   document.querySelector(".cursor").style.transform = "rotate(180deg)";
     // });
 
-    document.querySelector(".toggleMenu").addEventListener("mouseleave", () => {
-      cursor.classList.remove("active-nav");
-
-      cursorFollower.classList.remove("active");
-    });
-
-    document.querySelector(".toggleMenu").addEventListener("mouseover", () => {
-      cursor.classList.add("active-nav");
-
-      cursorFollower.classList.add("active");
-    });
-
     if (window.location.href.includes("works")) {
       document.querySelectorAll(".work-project button").forEach((el) =>
         el.addEventListener("mouseover", () => {
-          cursor.classList.add("active-nav");
+          cursor.classList.add("active");
 
           cursorFollower.classList.add("active");
         })
@@ -99,15 +68,13 @@ class MyCursor extends React.Component {
 
       document.querySelectorAll(".work-project button").forEach((el) =>
         el.addEventListener("mouseleave", () => {
-          cursor.classList.remove("active-nav");
+          cursor.classList.remove("active");
 
           cursorFollower.classList.remove("active");
         })
       );
     }
   }
-
-  componentDidUpdate() {}
 
   render() {
     return (

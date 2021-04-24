@@ -1,58 +1,50 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./Work.styles.scss";
 //import { useParams } from "react-router-dom";
 import img1 from "../../assets/images/work2_hero.jpg";
-import react from "../../assets/images/react.png";
-import sass from "../../assets/images/sass.png";
-import analytics from "../../assets/images/analytics.png";
 
-import showCase_1 from "../../assets/images/showCase_1.png";
 import { TimelineMax } from "gsap";
 import video from "../../assets/images/gif1.mp4";
-
+import LoaderBox from "../Homepage/LoaderBox.component.jsx";
+import { minimalPortfolio } from "./work.data.js";
+import { Link } from "react-router-dom";
 class Work extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  state = {
+    isMobile: false,
+    work: [],
+    summary: [],
+    icons: [],
+    services: [],
+  };
 
-  //let { workId } = useParams();
   componentDidMount() {
-    let tl1 = new TimelineMax();
-    tl1
-      .fromTo(
-        ".work",
-        1,
-        { visibility: "hidden" },
-        { x: 0, visibility: "visible", delay: 0.1 }
-      )
-      .to(".loader-box", 1, { zIndex: -1, delay: 0.1 })
-      .to("body", 1, { overflow: "visible" });
+    if (screen.width < 768) {
+      this.setState({ isMobile: true }, () => {
+        document.querySelector("body").style.overflow = "auto";
+      });
+    } else {
+      this.setState({ isMobile: false }, () => {
+        import("../Homepage/Animations.js").then((animations) =>
+          animations.loaderAnimationWork()
+        );
+      });
+    }
+
+    if (this.props.match.params.workId === "minimal-portfolio-im") {
+      this.setState({ work: minimalPortfolio });
+      this.setState({ summary: minimalPortfolio.summary });
+      this.setState({ services: minimalPortfolio.services });
+      this.setState({ icons: minimalPortfolio.icons });
+    }
   }
 
   render() {
-    let { company, text, param } = this.props;
+    let { title, text, showCaseImgUrl } = this.state.work;
+    let { client, completed, timeframe, website } = this.state.summary;
+
     return (
-      <>
-        <div className="loader-box">
-          <div className="temp">
-            {" "}
-            <video muted loop autoPlay src={video}></video>{" "}
-          </div>
-          <div className="first-block"></div>
-          <div className="second-block"></div>
-          <div className="loader">
-            <ul>
-              <li>P</li>
-              <li>R</li>
-              <li>O</li>
-              <li>J</li>
-              <li>E</li>
-              <li>C</li>
-              <li>T</li>
-            </ul>
-          </div>
-        </div>
+      <Suspense fallback={<h1>Loading</h1>}>
+        {!this.state.isMobile ? null : null}
 
         <div className="work">
           <div
@@ -61,58 +53,50 @@ class Work extends React.Component {
             }}
             className="hero"
           >
-            <h5>Ivan Maddaluno{company}</h5>
-            <h1>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
-              assumenda, excepturi est doloremque ipsum incidunt.{text}
-            </h1>
-          </div>{" "}
+            <h1>{title}</h1>
+          </div>
           <div className="project-details">
             <div className="detail">
               <p className="title">Client</p>
-              <p className="text">AM digital marketing</p>
+              <p className="text">{client}</p>
             </div>
             <div className="detail">
               <p className="title">Completed</p>
-              <p className="text">April 2021</p>
+              <p className="text">{completed}</p>
             </div>
             <div className="detail">
               <p className="title">Timeframe</p>
-              <p className="text">1 Month</p>
+              <p className="text">{timeframe}</p>
             </div>
             <div className="detail">
               <p className="title">Website</p>
-              <p className="text">AMinternetmarketing.com</p>
+              <p className="text">
+                <Link to={website}>{website}</Link>
+              </p>
             </div>
           </div>
-          {/* <div className="skills">
-            <SkillBox skillText="Core Tech" imgUrl={react} />
-            <SkillBox skillText="Styling" imgUrl={sass} />
-            <SkillBox skillText="Marketing Tools" imgUrl={analytics} />
-          </div> */}
+
           <div className="presentation">
             <div className="desc">
-              <p>
-                {
-                  "L'idea alla base del progetto era quella di creare un portfolio lavoro con una grafica minimal che non distraesse i visitatori dalle informazioni importanti quali i contatti ed i progetti principali"
-                }
-              </p>
+              <p>{text}</p>
               <div className="skills">
-                <img width="64" src={react} alt="react-logo" />
-                <img width="64" src={sass} alt="sass-logo" />
-                <img width="64" src={analytics} alt="analytics-logo" />
+                {this.state.icons.map((skill) => (
+                  <img key={skill} width="64" src={skill} alt="skill-icon" />
+                ))}
               </div>
             </div>
             <div className="services-used">
               <h4>Services</h4>
-              <p>Custom Website</p>
-              <p>Web Analytics</p>
-              <p>Responsive</p>
+              {this.state.services.map((service) => (
+                <p key={service}>{service}</p>
+              ))}
             </div>
           </div>
-          <div className="gallery">{<img src={showCase_1} alt="" />}</div>
+          <div className="gallery">
+            {<img src={showCaseImgUrl} alt={title} />}
+          </div>
         </div>
-      </>
+      </Suspense>
     );
   }
 }

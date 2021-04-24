@@ -2,29 +2,59 @@ import React from "react";
 import "./Nav.styles.scss";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
-import email from "../../assets/icons/social-email.png";
-import facebook from "../../assets/icons/social-facebook.png";
-import linkedin from "../../assets/icons/social-linkedin.png";
+import email from "../../assets/icons/email.svg";
+import linkedin from "../../assets/icons/linkedin.svg";
+import whatsapp from "../../assets/icons/whatsapp.svg";
+
 import { TimelineMax } from "gsap";
+import { applyClassOnHover } from "../../util/fn.js";
 
 class Nav extends React.Component {
   componentDidMount() {
     const button = document.querySelector(".toggleMenu");
     const menu = document.querySelector(".extended-menu");
     const body = document.querySelector("body");
+
+    // mouseover
+    // mouseleave
+
+    applyClassOnHover(".extended-menu", [
+      // "active",
+      // "active-follower",
+      "inverted",
+      "inverted-follower",
+    ]);
+
     //const nav = document.querySelector("nav");
     //const tl1 = new TimelineMax();
     const tl2 = new TimelineMax();
-    let counter = 1;
+
     button.addEventListener("click", () => {
       button.classList.toggle("-menu-open");
       menu.classList.toggle("open");
-      console.log(counter);
 
       body.classList.toggle("overflow-hid");
     });
 
-    // tl2.fromTo("nav", 0.5, { opacity: 0 }, { opacity: 1, delay: 0.5 });
+    tl2
+      .fromTo("nav", 0.5, { opacity: 0 }, { opacity: 1, delay: 0.5 })
+      .fromTo("nav", { zIndex: -1 }, { zIndex: 9, delay: 1 });
+    applyClassOnHover(
+      ".toggleMenu",
+      ["active", "active-follower", "active-nav"],
+      "Menu"
+    );
+
+    applyClassOnHover("nav a:not(.logo-link)", ["active", "active-follower"]);
+    applyClassOnHover("nav .logo-link", ["inverted", "inverted-follower"]);
+    applyClassOnHover(".extended-menu a:not(.logo-link)", [
+      "active",
+      "active-follower",
+    ]);
+
+    // setTimeout(() => {
+    //   document.querySelector("#mobile-nav .title").style.display = "none";
+    // }, 1000);
   }
 
   render() {
@@ -33,8 +63,9 @@ class Nav extends React.Component {
         <nav>
           <ul>
             <li className="logo">
-              <Link to="/">
-                <img width="124px" height="124px" src={Logo} alt="logo" />
+              <Link className="logo-link" to="/">
+                <img width="48px" height="48px" src={Logo} alt="logo" />
+                BeluaCode.
               </Link>
             </li>
 
@@ -92,28 +123,19 @@ class Nav extends React.Component {
                 <li>
                   <Link to="/">
                     <img
-                      width="20px"
-                      height="20px"
+                      width="24px"
+                      height="24px"
                       src={email}
                       alt="email-icon"
                     />
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/">
                     <img
-                      width="20px"
-                      height="20px"
-                      src={facebook}
-                      alt="facebook-logo"
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <img
-                      width="20px"
-                      height="20px"
+                      width="28px"
+                      height="28px"
                       src={linkedin}
                       alt="linkedin-logo"
                     />
@@ -123,43 +145,90 @@ class Nav extends React.Component {
             </li>
           </ul>
         </nav>
+        <div id="mobile-nav">
+          <ul>
+            <li className="logo">
+              <Link to="/">
+                <img width="48px" height="48px" src={Logo} alt="logo" />
+                <span className="title">BeluaCode.</span>
+              </Link>
+            </li>
+
+            <li className="social">
+              <ul>
+                <li>
+                  <Link to="/">
+                    <img
+                      width="24px"
+                      height="24px"
+                      src={email}
+                      alt="email-icon"
+                    />
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/">
+                    <img
+                      width="28px"
+                      height="28px"
+                      src={linkedin}
+                      alt="linkedin-logo"
+                    />
+                  </Link>
+                </li>
+
+                <li>
+                  <a href="https://wa.me/+4915251492559">
+                    <img
+                      width="28px"
+                      height="28px"
+                      src={whatsapp}
+                      alt="linkedin-logo"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
         <div className="extended-menu">
           <ul>
             <li>
               <span>01</span>
-              <Link to="/projects">Progetti</Link>
+              <Link to="/works">Progetti</Link>
             </li>
             <li>
               <span>02</span>
 
-              <Link to="/testimonials">Testimonials</Link>
+              <Link to="/services">Servizi</Link>
             </li>
-            <li>
+            {/* <li>
               <span>03</span>
 
-              <Link to="/about-us">Servizi</Link>
-            </li>
-            <li>
+              <Link to="/about-us">Chi Siamo</Link>
+            </li> */}
+            {/* <li>
               <span>04</span>
 
               <Link to="projects">Blog</Link>
-            </li>
+            </li> */}
             <li>
-              <span>05</span>
+              <span>03</span>
 
-              <Link to="/contact-us">Contattaci</Link>
+              <Link to="https://wa.me/+4915251492559">Contattaci</Link>
             </li>
           </ul>
 
           <ul className="extended-menu-social">
             <li>
-              <Link to="/">Email</Link>
+              <Link to="mailto:ivanmaddaluno1993@gmail.com">Email</Link>
             </li>
             <li>
               <Link to="/">Linkedin</Link>
             </li>
             <li>
-              <Link to="/">Facebook</Link>
+              <Link to="/">Instagram</Link>
             </li>
           </ul>
         </div>
