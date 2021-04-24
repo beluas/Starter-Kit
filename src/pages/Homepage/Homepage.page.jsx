@@ -32,7 +32,7 @@ class Homepage extends React.Component {
   render() {
     return (
       <Suspense fallback={<h1>Loading</h1>}>
-        {!this.state.isMobile ? null : null}
+        {!this.state.isMobile ? <LoaderBox /> : null}
 
         <div className="flex">
           <section className="homepage">
