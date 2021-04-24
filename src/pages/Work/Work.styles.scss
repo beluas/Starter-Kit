@@ -1,5 +1,8 @@
 .work {
   opacity: 0;
+  @media (max-width: 760px) {
+    opacity: 1;
+  }
   position: relative;
   z-index: 2;
   margin-left: 6em;
