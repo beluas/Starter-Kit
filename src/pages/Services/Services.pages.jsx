@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import "./Services.styles.scss";
 import work1 from "../../assets/images/work1.jpg";
-import servicesGa from "../../assets/images/services-ga.jpg";
 import servicesFb from "../../assets/images/services-fb.jpg";
 import servicesWeb from "../../assets/images/services-web.jpg";
 import servicesWebsite from "../../assets/images/services-website.jpg";
@@ -25,10 +24,7 @@ import s_seo from "../../assets/icons/s-seo.svg";
 import s_sett from "../../assets/icons/s-sett.svg";
 
 import sass from "../../assets/images/sass.png";
-import analytics from "../../assets/images/analytics.png";
-import { TimelineMax, Expo } from "gsap";
 
-import Work from "../../components/Project/Project.component.jsx";
 import Project from "../../components/Project/Project.component.jsx";
 import LoaderBox from "../Homepage/LoaderBox.component.jsx";
 import { applyClassOnHover } from "../../util/fn";
@@ -41,7 +37,7 @@ class Works extends React.Component {
   componentDidMount() {
     if (screen.width < 768) {
       this.setState({ isMobile: true }, () => {
-        document.querySelector("body").style.overflow = "auto";
+        document.querySelector("body").style.overflow = "visible";
       });
     } else {
       this.setState({ isMobile: false }, () => {

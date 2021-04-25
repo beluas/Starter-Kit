@@ -4,17 +4,6 @@
   font-display: swap;
 }
 
-// @font-face {
-//   font-family: "primary-bold";
-//   src: url("../assets/fonts/PlusJakartaSans-Bold.ttf");
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: "primary-light";
-//   src: url("../assets/fonts/PlusJakartaSans-Light.ttf");
-// }
-
 * {
   box-sizing: border-box;
 }
@@ -32,6 +21,7 @@ body {
     }
     cursor: none;
   }
+  overflow: visible;
   height: 100%;
   width: 100%;
   font-family: "primary-reg", sans-serif;
