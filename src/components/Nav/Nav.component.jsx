@@ -157,7 +157,7 @@ class Nav extends React.Component {
 
             <li className="social">
               <ul>
-                <li>
+                {/* <li>
                   <Link to="/">
                     <img
                       width="24px"
@@ -166,7 +166,7 @@ class Nav extends React.Component {
                       alt="email-icon"
                     />
                   </Link>
-                </li>
+                </li> */}
 
                 <li>
                   <Link to="/">
