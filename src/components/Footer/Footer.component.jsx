@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Footer.styles.scss";
 // import icon from "../../assets/icons/arrow-top-right.png";
 import Jumbotron from "../../components/Jumbotron/Jumbotron.component";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/icons/logo.svg";
 
 const Footer = () => {
   return (

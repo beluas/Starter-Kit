@@ -13,7 +13,7 @@ export const loaderAnimation = () => {
 
       { opacity: 1, delay: 0.5 }
     )
-    .to("body", 0.8, { overflow: "hidden", delay: 2.7 })
+    .to("body", 0.8, { overflow: "visible", delay: 2.7 })
     .to(".loader-box", 2, { display: "none", delay: 0.8 });
 };
 
@@ -60,7 +60,7 @@ export const loaderAnimationWorks = () => {
 };
 
 export const loaderAnimationServices = () => {
-  document.querySelector("body").style.overflow = "hidden";
+  document.querySelector("body").style.overflow = "visible";
   let tl1 = new TimelineMax();
   tl1
     .to(

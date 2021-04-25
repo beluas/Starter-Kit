@@ -1,10 +1,11 @@
 import React from "react";
 import "./Nav.styles.scss";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/icons/logo.svg";
 import email from "../../assets/icons/email.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
 import whatsapp from "../../assets/icons/whatsapp.svg";
+//import logo from 'react'
 
 import { TimelineMax } from "gsap";
 import { applyClassOnHover } from "../../util/fn.js";
