@@ -20,7 +20,7 @@
   }
 
   @media (max-width: 930px) {
-    padding: 2em;
+    padding: 1.5em;
   }
   header {
     @media (max-width: 700px) {
@@ -83,7 +83,13 @@
     }
 
     @media (max-width: 500px) {
-      font-size: 2.3em;
+      font-size: 2.1em;
+    }
+    .text {
+      @media (max-width: 500px) {
+        display: inline-block;
+        margin-top: 0.5em;
+      }
     }
   }
 }

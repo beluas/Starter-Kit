@@ -15,7 +15,7 @@ const Jumbotron = () => {
   return (
     <div
       style={
-        window.location.href.includes("works") && screen.width < 1000
+        window.location.href.includes("works") && screen.width < 867
           ? { marginTop: "10em" }
           : null
       }

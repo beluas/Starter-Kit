@@ -40,7 +40,7 @@ class Work extends React.Component {
 
   render() {
     let { title, text, showCaseImgUrl } = this.state.work;
-    let { client, completed, timeframe, website } = this.state.summary;
+    let { client, completed, website } = this.state.summary;
 
     return (
       <Suspense fallback={<h1>Loading</h1>}>
@@ -61,13 +61,10 @@ class Work extends React.Component {
               <p className="text">{client}</p>
             </div>
             <div className="detail">
-              <p className="title">Completed</p>
+              <p className="title">Completato</p>
               <p className="text">{completed}</p>
             </div>
-            <div className="detail">
-              <p className="title">Timeframe</p>
-              <p className="text">{timeframe}</p>
-            </div>
+
             <div className="detail">
               <p className="title">Website</p>
               <p className="text">

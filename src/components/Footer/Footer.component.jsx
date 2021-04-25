@@ -13,17 +13,17 @@ const Footer = () => {
         <section className="first-section">
           <ul className="footer-menu social">
             <li>
-              <Link to="/">Portfolio</Link>
+              <Link to="/works">I nostri Lavori</Link>
             </li>
             <li>
-              <Link to="/">Servizi Digital Marketing</Link>
+              <Link to="/services">I nostri Servizi </Link>
             </li>
             <li>
-              <Link to="/">Contattaci</Link>
+              <Link to="https://wa.me/+4915251492559">Contattaci</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/">Blog</Link>
-            </li>
+            </li> */}
           </ul>
           {/* <ul className="social">
             <li>
@@ -62,7 +62,6 @@ const Footer = () => {
           </ul> */}
         </section>
         <section className="second-section">
-          {" "}
           <div className="logo">
             <a
               target="blank"
@@ -80,12 +79,6 @@ const Footer = () => {
               <p>Berlin 10711 DE</p>
               <p>Seesener Str.</p>
             </div>
-
-            {/* <div className="location">
-              <h4>Beluacode Oristano</h4>
-              <p>Oristano 09170 IT</p>
-              <p>Via Sa Pippia de Maju</p>
-            </div> */}
           </div>
         </section>
       </footer>

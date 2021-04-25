@@ -6,6 +6,8 @@ import section3 from "../../assets/images/section3.jpg";
 import SectionBox from "../../components/SectionBox/SectionBox.component.jsx";
 import LoaderBox from "./LoaderBox.component.jsx";
 import { Link } from "react-router-dom";
+// SHORTEN LOADER ANIMATION
+// LOOK AT ANIMATIONS IN GENERAL
 
 class Homepage extends React.Component {
   state = {
@@ -17,6 +19,9 @@ class Homepage extends React.Component {
     if (screen.width < 768) {
       this.setState({ isMobile: true }, () => {
         document.querySelector("body").style.overflow = "auto";
+        import("./Animations.js").then((animations) => {
+          animations.loaderTitle();
+        });
       });
     } else {
       this.setState({ isMobile: false }, () => {

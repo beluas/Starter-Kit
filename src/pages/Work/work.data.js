@@ -7,11 +7,10 @@ export const minimalPortfolio = {
   id: 1,
   title: "Minimal Portfolio",
   text:
-    "Un portfolio dal design minimale per non distrarre le aziende dai contenuti e l'accesso ai contatti",
+    "Portfolio lavori Front-End Developer. Design minimal per concentrare l'attenzione sugli elementi chiave.",
   summary: {
     client: "Ivan Maddaluno",
     completed: "June 2020",
-    timeframe: "2 Weeks",
     website: "https://beluas.github.io/Projects",
   },
   services: ["Custom Website", "Web Analytics", "Responsive"],
