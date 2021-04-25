@@ -5,7 +5,6 @@ import servicesFb from "../../assets/images/services-fb.jpg";
 import servicesWeb from "../../assets/images/services-web.jpg";
 import servicesWebsite from "../../assets/images/services-website.jpg";
 
-import comingSoon2 from "../../assets/images/comingSoon2.jpg";
 import MyBtn from "../../components/UI/MyBtn/MyBtn.ui.component.jsx";
 import react from "../../assets/images/react.png";
 import s_fb from "../../assets/icons/s-fb.svg";
