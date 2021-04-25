@@ -1,11 +1,8 @@
 import React, { Suspense } from "react";
 import "./Services.styles.scss";
-import work1 from "../../assets/images/work1.jpg";
 import servicesFb from "../../assets/images/services-fb.jpg";
-import servicesWeb from "../../assets/images/services-web.jpg";
 import servicesWebsite from "../../assets/images/services-website.jpg";
 
-import MyBtn from "../../components/UI/MyBtn/MyBtn.ui.component.jsx";
 import react from "../../assets/images/react.png";
 import s_fb from "../../assets/icons/s-fb.svg";
 import s_ig from "../../assets/icons/s-ig.svg";
@@ -27,7 +24,6 @@ import sass from "../../assets/images/sass.png";
 import Project from "../../components/Project/Project.component.jsx";
 import LoaderBox from "../Homepage/LoaderBox.component.jsx";
 import { applyClassOnHover } from "../../util/fn";
-import { loaderAnimationWorks } from "../Homepage/Animations";
 
 class Works extends React.Component {
   state = {
