@@ -4,7 +4,6 @@ import MyBtn from "../../components/UI/MyBtn/MyBtn.ui.component.jsx";
 import section2 from "../../assets/images/section2.jpg";
 import section3 from "../../assets/images/section3.jpg";
 import SectionBox from "../../components/SectionBox/SectionBox.component.jsx";
-//import LatestNews from "../../components/LatestNews/LatestNews.component.jsx";
 import LoaderBox from "./LoaderBox.component.jsx";
 import { Link } from "react-router-dom";
 
@@ -69,7 +68,7 @@ class Homepage extends React.Component {
               />
               <SectionBox
                 handleClick={() => {
-                  this.props.history.push("/digital-marketing-service");
+                  this.props.history.push("/servicesgit a");
                 }}
                 title="Digital Marketing Services"
                 imgUrl={section3}
