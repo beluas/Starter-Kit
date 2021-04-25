@@ -68,7 +68,7 @@ class Homepage extends React.Component {
               />
               <SectionBox
                 handleClick={() => {
-                  this.props.history.push("/servicesgit a");
+                  this.props.history.push("/services");
                 }}
                 title="Digital Marketing Services"
                 imgUrl={section3}
