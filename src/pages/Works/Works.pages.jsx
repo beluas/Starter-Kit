@@ -39,7 +39,7 @@ class Works extends React.Component {
         ) : null}
         <div className="works">
           <header>
-            <h1>I nostri progetti.</h1>
+            <h1>I Nostri Lavori.</h1>
           </header>
           <Project
             imgUrl={showCase_1}

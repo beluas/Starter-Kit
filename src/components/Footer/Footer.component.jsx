@@ -77,7 +77,9 @@ const Footer = () => {
             <div className="location">
               <p className="location-title">Beluacode </p>
               <p>Berlin 10711 DE</p>
-              <p>Seesener Str.</p>
+              <a href="mailto:ivanmaddaluno1993@gmail.com">
+                ivanmaddaluno1993@gmail.com
+              </a>
             </div>
           </div>
         </section>

@@ -13,7 +13,7 @@ export const minimalPortfolio = {
     completed: "June 2020",
     website: "https://beluas.github.io/Projects",
   },
-  services: ["Custom Website", "Web Analytics", "Responsive"],
+  services: ["Sito Custom", "Web Analytics", "Responsive"],
   icons: [react, sass, analytics],
   showCaseImgUrl: showCase_1,
 };

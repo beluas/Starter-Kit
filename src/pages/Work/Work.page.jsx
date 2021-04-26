@@ -8,6 +8,7 @@ import video from "../../assets/images/gif1.mp4";
 import LoaderBox from "../Homepage/LoaderBox.component.jsx";
 import { minimalPortfolio } from "./work.data.js";
 import { Link } from "react-router-dom";
+import MyBtn from "../../components/UI/MyBtn/MyBtn.ui.component";
 class Work extends React.Component {
   state = {
     isMobile: false,
@@ -45,7 +46,7 @@ class Work extends React.Component {
     return (
       <Suspense fallback={<h1>Loading</h1>}>
         {!this.state.isMobile ? (
-          <LoaderBox words={["p", "r", "o", "g", "e", "t", "t", "o"]} />
+          <LoaderBox words={["p", "r", "o", "g", "e", "t", "t", "i"]} />
         ) : null}
 
         <div className="work">
@@ -59,7 +60,7 @@ class Work extends React.Component {
           </div>
           <div className="project-details">
             <div className="detail">
-              <p className="title">Client</p>
+              <p className="title">Cliente</p>
               <p className="text">{client}</p>
             </div>
             <div className="detail">
@@ -68,7 +69,7 @@ class Work extends React.Component {
             </div>
 
             <div className="detail">
-              <p className="title">Website</p>
+              <p className="title">Link Sito Web</p>
               <p className="text">
                 <Link to={website}>{website}</Link>
               </p>
@@ -85,10 +86,14 @@ class Work extends React.Component {
               </div>
             </div>
             <div className="services-used">
-              <h4>Services</h4>
+              <h4>Servizi Utilizzati</h4>
               {this.state.services.map((service) => (
                 <p key={service}>{service}</p>
               ))}
+              <Link to="/services">
+                {" "}
+                <MyBtn>I nostri servizi</MyBtn>{" "}
+              </Link>
             </div>
           </div>
           <div className="gallery">

@@ -16,26 +16,20 @@
     }
   }
   .project {
-    @media (max-width: 1500px) {
-      padding: 5em 10em 10em 10em;
-    }
-
-    @media (max-width: 1400px) {
-      padding: 5em 0em 10em 8em;
-    }
-
     @media (max-width: 1150px) {
-      padding: 5em 0em 10em 6em;
+      padding-left: 100px;
     }
 
-    @media (max-width: 867px) {
-      padding: 0em;
+    @media (max-width: 869px) {
       margin-bottom: 0em;
-      padding-bottom: 3em;
+      padding: 0;
+    }
+    @media (max-width: 870px) {
+      margin-bottom: 0em;
     }
 
     @media (max-width: 600px) {
-      padding: 0.8em;
+      //padding: 0.8em;
     }
 
     .image-wrapper {

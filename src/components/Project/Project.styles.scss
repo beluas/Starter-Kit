@@ -5,14 +5,30 @@
   background-color: #151515;
   color: white;
   width: 100%;
-  padding: 3em 5em 8em 12em;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  padding-left: 100px;
 
+  @media (max-width: 1150px) {
+    flex-basis: 100%;
+
+    text-align: center;
+  }
   @media (max-width: 870px) {
     padding: 3em;
     margin-bottom: -12em;
   }
+
   .text {
-    flex-basis: 45%;
+    flex-basis: 48%;
+
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    text-align: center;
+    @media (max-width: 550px) {
+      margin-bottom: 10em;
+    }
     @media (max-width: 1150px) {
       flex-basis: 100%;
       text-align: center;
@@ -22,12 +38,16 @@
       @media (max-width: 867px) {
         padding-top: 2em;
       }
+
+      @media (max-width: 450px) {
+        font-size: 1.5em;
+        padding: 0 1em;
+      }
     }
     p {
-      margin-top: 2em;
-      margin-bottom: 4em;
       line-height: 150%;
-
+      width: 80%;
+      margin: 2em auto 4em;
       @media (max-width: 700px) {
         line-height: 200%;
       }
@@ -39,7 +59,7 @@
 
     .services-list {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       @media (max-width: 1440px) {
         // padding-left: 6em;
@@ -50,12 +70,12 @@
         padding-left: 2em;
       }
 
-      @media (max-width: 400px) {
+      @media (max-width: 550px) {
         display: none;
       }
       ul {
-        flex-basis: 50%;
-
+        flex-basis: 25%;
+        text-align: left;
         @media (max-width: 867px) {
           padding-right: 0;
         }
@@ -102,11 +122,11 @@
   }
 
   .skills {
-    @media (max-width: 1150px) {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
+    //@media (max-width: 1150px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    //}
 
     img {
       margin-top: 3em;
@@ -130,6 +150,10 @@
       flex-basis: 100%;
       margin-top: 10em;
     }
+
+    @media (max-width: 700px) {
+      margin-top: 5em;
+    }
     align-self: flex-start;
     &::before {
       display: block;
@@ -145,25 +169,30 @@
 
   .cta-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 3em;
+    width: 100%;
     @media (max-width: 1150px) {
       display: flex;
       justify-self: center;
-      justify-content: space-between;
-      width: 50%;
+      justify-content: space-evenly;
+
       margin: 0 auto;
       margin-top: 3em;
       @media (max-width: 700px) {
         width: 60%;
+        font-size: 0.9em;
       }
       @media (max-width: 600px) {
         width: 70%;
       }
       @media (max-width: 500px) {
-        width: 100%;
         margin-top: 0;
         margin-bottom: 3em;
+      }
+      @media (max-width: 450px) {
+        width: 90%;
+        font-size: 0.8em;
       }
     }
 

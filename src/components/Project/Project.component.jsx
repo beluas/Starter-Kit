@@ -51,7 +51,14 @@ const Project = ({
             <img key={skillsIcon} alt={skillsIcon} src={skillsIcon} />
           ))}
         </div>
-        <div className="cta-btns">
+        <div
+          style={
+            window.location.href.includes("works")
+              ? { justifyContent: "center" }
+              : {}
+          }
+          className="cta-btns"
+        >
           <Link
             to={isService ? "https://wa.me/+491525149255" : `/works/${url}`}
           >

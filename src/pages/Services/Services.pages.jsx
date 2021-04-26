@@ -118,11 +118,7 @@ class Works extends React.Component {
                 icons: [react, sass],
               },
               { name: "E-Commerce", icons: [react, sass] },
-              { name: "Siti Web Wordpress", icons: [s_wp] },
-              {
-                name: "E-commerce Wordpress + Woocommerce",
-                icons: [s_wp, s_woo],
-              },
+              { name: "Siti  Wordpress", icons: [s_wp] },
             ]}
             services={[
               {
@@ -133,6 +129,10 @@ class Works extends React.Component {
               {
                 name: "Design ottimizzati per ogni dispositivo.",
                 icons: [s_resp],
+              },
+              {
+                name: "E-commerce Wordpress + Woocommerce",
+                icons: [s_woo],
               },
             ]}
             skillsIcons={[]}
