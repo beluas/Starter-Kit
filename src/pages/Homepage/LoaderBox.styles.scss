@@ -94,7 +94,7 @@
     width: 0%;
     height: 100vh;
     background: #151515;
-    animation: go-left 3.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation: go-left 3s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
     animation-delay: 1.45s;
   }
 
@@ -169,5 +169,9 @@
 
   .loader ul li:nth-child(7) {
     animation-delay: 1.2s;
+  }
+
+  .loader ul li:nth-child(8) {
+    animation-delay: 1.3s;
   }
 }

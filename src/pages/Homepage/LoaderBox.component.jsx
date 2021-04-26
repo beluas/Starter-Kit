@@ -1,8 +1,8 @@
 import React from "react";
-import video from "../../assets/images/gif1.mp4";
+import video from "../../assets/images/videoloader.mp4";
 import "./LoaderBox.styles.scss";
 
-export default function LoaderBox() {
+export default function LoaderBox({ words }) {
   return (
     <div className="loader-box">
       <div className="temp">
@@ -12,13 +12,14 @@ export default function LoaderBox() {
       <div className="second-block"></div>
       <div className="loader">
         <ul>
-          <li>L</li>
-          <li>O</li>
-          <li>A</li>
-          <li>D</li>
-          <li>I</li>
-          <li>N</li>
-          <li>G</li>
+          <li>{words[0]}</li>
+          <li>{words[1]}</li>
+          <li>{words[2]}</li>
+          <li>{words[3]}</li>
+          <li>{words[4]}</li>
+          <li>{words[5]}</li>
+          <li>{words[6]}</li>
+          <li>{words[7]}</li>
         </ul>
       </div>
     </div>

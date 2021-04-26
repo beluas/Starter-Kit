@@ -36,7 +36,9 @@ class Homepage extends React.Component {
   render() {
     return (
       <Suspense fallback={<h1>Loading</h1>}>
-        {!this.state.isMobile ? <LoaderBox /> : null}
+        {!this.state.isMobile ? (
+          <LoaderBox words={["h", "o", "m", "e", "p", "a", "g  ", "e"]} />
+        ) : null}
 
         <div className="flex">
           <section className="homepage">

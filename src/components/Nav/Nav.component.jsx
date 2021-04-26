@@ -122,14 +122,14 @@ class Nav extends React.Component {
             <li className="social">
               <ul>
                 <li>
-                  <Link to="/">
+                  <a href="mailto:ivanmaddaluno1993@gmail.com">
                     <img
                       width="24px"
                       height="24px"
                       src={email}
                       alt="email-icon"
                     />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
@@ -141,6 +141,16 @@ class Nav extends React.Component {
                       alt="linkedin-logo"
                     />
                   </Link>
+                </li>
+                <li>
+                  <a href="https://wa.me/+4915251492559">
+                    <img
+                      width="28px"
+                      height="28px"
+                      src={whatsapp}
+                      alt="whatsapp-logo"
+                    />
+                  </a>
                 </li>
               </ul>
             </li>
@@ -185,7 +195,7 @@ class Nav extends React.Component {
                       width="28px"
                       height="28px"
                       src={whatsapp}
-                      alt="linkedin-logo"
+                      alt="whatsapp-logo"
                     />
                   </a>
                 </li>

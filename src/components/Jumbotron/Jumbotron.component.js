@@ -22,7 +22,9 @@ const Jumbotron = () => {
       className="jumbotron"
     >
       <h2>Richiedi informazioni senza impegno</h2>
-      <MyBtn> Contattaci </MyBtn>
+      <a href="https://wa.me/+4915251492559">
+        <MyBtn>Contattaci</MyBtn>
+      </a>
     </div>
   );
 };

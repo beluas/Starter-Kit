@@ -34,7 +34,9 @@ class Works extends React.Component {
   render() {
     return (
       <Suspense fallback={<h1>Loading</h1>}>
-        {!this.state.isMobile ? <LoaderBox /> : null}
+        {!this.state.isMobile ? (
+          <LoaderBox words={["l", "a", "v", "o", "r", "i"]} />
+        ) : null}
         <div className="works">
           <header>
             <h1>I nostri progetti.</h1>

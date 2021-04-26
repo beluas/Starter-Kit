@@ -13,7 +13,7 @@ export const loaderAnimation = () => {
 
       { opacity: 1, delay: 0.5 }
     )
-    .to("body", 0.8, { overflow: "visible", delay: 2.2 })
+    .to("body", 0.8, { overflow: "visible", delay: 1.5 })
     .to(".loader-box", { display: "none" });
 };
 
@@ -55,7 +55,7 @@ export const loaderAnimationWorks = () => {
 
       { opacity: 1, delay: 1 }
     )
-    .to("body", 0.8, { overflow: "visible", delay: 2.2 })
+    .to("body", 0.8, { overflow: "visible", delay: 1.5 })
     .to(".loader-box", { display: "none" });
 };
 
@@ -69,7 +69,7 @@ export const loaderAnimationServices = () => {
 
       { opacity: 1, delay: 1 }
     )
-    .to("body", 1.8, { overflow: "visible", delay: 2.2 })
+    .to("body", 1.8, { overflow: "visible", delay: 1.5 })
     .to(".loader-box", { display: "none" });
 };
 
@@ -84,6 +84,6 @@ export const loaderAnimationWork = () => {
 
       { opacity: 1, delay: 1 }
     )
-    .to("body", 0.8, { overflow: "visible", delay: 2.2 })
+    .to("body", 0.8, { overflow: "visible", delay: 1.5 })
     .to(".loader-box", { display: "none" });
 };
